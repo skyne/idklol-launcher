@@ -2,6 +2,12 @@
 @source '@/app';
 @source '@/lib';
 
+@font-face{
+  font-family: "AtticAntique";
+  src:local("AtticAntique"),
+  url('../../resources/fonts/AtticAntique.ttf') 
+}
+
 @theme {
   --color-background: var(--background);
   --color-foreground: var(--foreground);

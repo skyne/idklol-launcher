@@ -2,12 +2,7 @@
 @import './window.css';
 
 body {
-  font-family:
-    system-ui,
-    -apple-system,
-    Arial,
-    Helvetica,
-    sans-serif;
+  font-family: "AtticAntique";
   font-size: 14px;
   margin: 0;
   overflow: hidden;
@@ -19,4 +14,5 @@ body,
   height: 100%;
   margin: 0;
   line-height: 1.4;
+  background-image: url(..\assets\paintedui\Widnow_Frame_Large.PNG);
 }
