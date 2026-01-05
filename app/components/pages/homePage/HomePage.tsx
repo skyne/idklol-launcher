@@ -2,6 +2,7 @@ import { Page, setPage } from '@/app/states/router'
 import { Button } from '../../ui/button/Button'
 import ProfileIcon from '@/app/assets/paintedui/Profile_1.png'
 import InfoBoxIcon from '@/app/assets/paintedui/Info_1.png'
+import SettingsIcon from '@/app/assets/paintedui/Options_1.png'
 import BackgroundImage from '@/app/assets/background_elf_2.png'
 import { ButtonVariant } from '../../ui/button/Button.types'
 import { Header } from '../../ui/header/Header'
@@ -22,6 +23,7 @@ export const HomePage = () => {
           <InfoBox icon={InfoBoxIcon} title="Patch notes" />
           <InfoBox icon={InfoBoxIcon} title="Dev diary" />
           <InfoBox icon={InfoBoxIcon} title="v1.2.3" />
+          <InfoBox icon={SettingsIcon} title="Settings" onClick={() => setPage(Page.SETTINGS)} />
         </div>
       </div>
       <div className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2">
