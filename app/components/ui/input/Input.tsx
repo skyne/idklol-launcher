@@ -2,9 +2,12 @@ import { useMemo, useRef, useState } from 'react'
 
 type InputProps = {
   label?: string
+  value?: string
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void
+  placeholder?: string
 }
 
-export const Input = ({ label }: InputProps) => {
+export const Input = ({ label, value, onChange, placeholder }: InputProps) => {
   const [focused, setFocused] = useState(false)
   const inputRef = useRef<HTMLInputElement>(null)
 
@@ -32,7 +35,10 @@ export const Input = ({ label }: InputProps) => {
         <input
           ref={inputRef}
           type="text"
-          className="w-full bg-transparent outline-none text-black text-sm text-center font-semibold"
+          value={value}
+          onChange={onChange}
+          placeholder={placeholder}
+          className="w-full bg-transparent outline-none text-black text-sm text-center font-semibold placeholder:text-gray-400"
           onFocus={() => setFocused(true)}
           onBlur={() => setFocused(false)}
         />
