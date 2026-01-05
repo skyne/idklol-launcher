@@ -27,7 +27,9 @@ export const HomePage = () => {
         </div>
       </div>
       <div className="absolute bottom-4 left-1/2 z-10 -translate-x-1/2">
-        <Button variant={ButtonVariant.Large}>Play game</Button>
+        <Button variant={ButtonVariant.Large} onClick={() => {
+                void window.conveyor.app.launchGame()
+              }}>Play game</Button>
       </div>
     </div>
   )
