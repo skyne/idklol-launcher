@@ -12,12 +12,16 @@ type SettingsState = {
   gameExecutablePath: string
   gameServerUrl: string
   chatServerUrl: string
+  keycloakUrl: string
+  logFileName: string
 }
 
 const initialState: SettingsState = {
   gameExecutablePath: '',
   gameServerUrl: '',
   chatServerUrl: '',
+  keycloakUrl: 'http://localhost:8080',
+  logFileName: 'date.log',
 }
 
 export const SettingsPage = () => {
@@ -36,6 +40,8 @@ export const SettingsPage = () => {
           gameExecutablePath: loaded.gameExecutablePath ?? '',
           gameServerUrl: loaded.gameServerUrl ?? '',
           chatServerUrl: loaded.chatServerUrl ?? '',
+          keycloakUrl: loaded.keycloakUrl ?? '',
+          logFileName: loaded.logFileName ?? 'date.log',
         })
         setHasLoaded(true)
       } catch (error) {
@@ -116,6 +122,22 @@ export const SettingsPage = () => {
             value={settings.chatServerUrl}
             onChange={(e) => updateField('chatServerUrl')(e.target.value)}
             placeholder="wss://chat.server.com"
+          />
+
+          {/* Keycloak URL */}
+          <Input
+            label="Keycloak URL:"
+            value={settings.keycloakUrl}
+            onChange={(e) => updateField('keycloakUrl')(e.target.value)}
+            placeholder="http://localhost:8080"
+          />
+
+          {/* Log File Name */}
+          <Input
+            label="Log File Name:"
+            value={settings.logFileName}
+            onChange={(e) => updateField('logFileName')(e.target.value)}
+            placeholder="date.log or {date}.log"
           />
 
           {/* Settings Info */}
