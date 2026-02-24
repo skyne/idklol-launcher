@@ -33,8 +33,8 @@ export const Button = ({ children, onClick, variant = ButtonVariant.Normal }: In
 
   const backgroundClass = useMemo(() => {
     return hovered
-      ? "bg-[url('../assets/paintedui/Button_1_Clicked_White.PNG')]"
-      : "bg-[url('../assets/paintedui/Button_1_Normal.PNG')]"
+      ? "bg-[url('../assets/paintedui/Button_1_Clicked_White.png')]"
+      : "bg-[url('../assets/paintedui/Button_1_Normal.png')]"
   }, [hovered])
 
   return (

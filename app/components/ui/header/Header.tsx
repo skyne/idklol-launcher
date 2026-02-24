@@ -34,7 +34,7 @@ export const Header = ({ title }: HeaderProps) => {
 
   return (
     <div
-      className="bg-[url(..\assets\paintedui\Sub_Heading_Slash_white.PNG)] bg-no-repeat bg-contain flex items-center px-8 z-1"
+      className="bg-[url(..\assets\paintedui\Sub_Heading_Slash_white.png)] bg-no-repeat bg-contain flex items-center px-8 z-1"
       style={{
         width: size?.width,
         height: size?.height,

@@ -18,8 +18,8 @@ export const Input = ({ label, value, onChange, placeholder, type = 'text' }: In
 
   const backgroundClass = useMemo(() => {
     return focused
-      ? "bg-[url('../assets/paintedui/Button_2_Clicked_White.PNG')]"
-      : "bg-[url('../assets/paintedui/Button_2_Normal.PNG')]"
+      ? "bg-[url('../assets/paintedui/Button_2_Clicked_White.png')]"
+      : "bg-[url('../assets/paintedui/Button_2_Normal.png')]"
   }, [focused])
 
   return (
